@@ -29,4 +29,13 @@ class homeModel{
         ]);
 
     }
+
+    public function deleteEvent($id){
+        $connection = Connection::getConnection();
+
+        $checkName = $connection->prepare("DELETE FROM `events` WHERE id=:id");
+        $checkName->execute([
+            ":id"=>$id,
+        ]);
+    }
 }

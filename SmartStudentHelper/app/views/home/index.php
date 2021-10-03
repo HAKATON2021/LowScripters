@@ -12,7 +12,7 @@
 </head>
 <body>
     <div class="main-wrapper" id="main_page">
-        <h1 class="title">Smart Student Helper <?php var_dump($data); ?></h1>
+        <h1 class="title">Smart Student Helper</h1>
         <div class="main-container small">
             <button class="btn-logIn btn" id="btn" onclick="OpenPage('#')"><i class="fas fa-user-alt"></i></button>
             <div><button class="btn" id="btn2" onclick="OpenPage('#admin_page','#user_page','#main_page')">Создать</button></div>
@@ -35,7 +35,6 @@
                 <div class="events-container" id="events-container">
                     <?php foreach($data['events'] as $row):?>
                         <span class="event">
-                            <div class="event_id hide"><?= $row['id'] ?></div>
                             <p class="event-name"><?= $row['evName'] ?></p>
                             <p class="event-des"><?= $row['evDecription'] ?></p>
                             <div class="event-time"><?= $row['evTime'] ?></div>
@@ -43,7 +42,10 @@
                             <div class="event-local"><?= $row['evLocation'] ?></div>
                             <div class="event-org"><?= $row['evOrganisator'] ?></div>
                             <button class="btn">Добавить</button>
+                            <form action="" method="POST">
+                            <input class="event_id hide" value="<?= $row['id'] ?>" name="id">
                             <input type="submit" class="btn" value="Удалить">
+                            </form>
                         </span>
                     <?php endforeach; ?>
                 </div>
