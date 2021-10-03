@@ -44,7 +44,7 @@
                             <button class="btn">Добавить</button>
                             <form action="" method="POST">
                             <input class="event_id hide" value="<?= $row['id'] ?>" name="id">
-                            <input type="submit" class="btn" value="Удалить">
+                            <input type="submit" name="delete" class="btn" value="Удалить">
                             </form>
                         </span>
                     <?php endforeach; ?>
