@@ -1,3 +1,8 @@
 "id";"evName";"evDescription";"evOrganisator";"evTime";"evDate";"evLocation"
-"9";"wgrrwgrgrg";"ereherhhe";"hehheq";"ehqhe";"heqherqheq";"rheqqrehqrhe"
-"10";"wgrrwgrgrg";"ereherhhe";"hehheq";"ehqhe";"heqherqheq";"rheqqrehqrhe"
+<br />
+<b>Fatal error</b>:  Uncaught TypeError: Return value of PhpMyAdmin\Encoding::convertString() must be of the type string, boolean returned in D:\OpenServer\modules\system\html\openserver\phpmyadmin\libraries\classes\Encoding.php:203
+Stack trace:
+#0 D:\OpenServer\modules\system\html\openserver\phpmyadmin\libraries\classes\Export.php(156): PhpMyAdmin\Encoding::convertString('utf-8', 'windows-1252', '&quot;18&quot;;&quot;Local&quot;;&quot;L...')
+#1 D:\OpenServer\modules\system\html\openserver\phpmyadmin\libraries\classes\Plugins\Export\ExportCsv.php(339): PhpMyAdmin\Export-&gt;outputHandler('&quot;18&quot;;&quot;Local&quot;;&quot;L...')
+#2 D:\OpenServer\modules\system\html\openserver\phpmyadmin\libraries\classes\Export.php(776): PhpMyAdmin\Plugins\Export\ExportCsv-&gt;exportData('smarthelperbase', 'events', '\r\n', 'db_export.php?d...', 'SELECT `id`, `e...', Array)
+#3 D:\OpenServer\modules\system\html\openserver\phpmyadmin\export.php(537): PhpMyAdmin\Export-&gt;exportDatabase('smarthelperbase', Array, 'data', Array, Array, Object(PhpMyAdmin\Plugins\Export\ExportExcel), '\r\n', 'db_export.ph in <b>D:\OpenServer\modules\system\html\openserver\phpmyadmin\libraries\classes\Encoding.php</b> on line <b>203</b><br />
